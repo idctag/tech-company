@@ -19,6 +19,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
 import React from "react";
 
@@ -39,23 +40,35 @@ function NavLink({ title, products }: NavLinkProps) {
       <NavigationMenuContent>
         <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
           <li className="row-span-3">
-            <NavigationMenuLink asChild>
-              <a
-                className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                href="/"
-              >
-                <div className="mb-2 mt-4 text-lg font-medium">{title}</div>
-                <p className="text-sm leading-tight text-muted-foreground">
-                  {title} description
-                </p>
-              </a>
-            </NavigationMenuLink>
+            <p className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+              <div className="mb-2 mt-4 text-lg font-medium">{title}</div>
+              <p className="text-sm leading-tight text-muted-foreground">
+                {title} description
+              </p>
+            </p>
           </li>
           {products.map((product) => {
             return (
-              <ListItem key={product.title} href={product.url}>
-                {product.title}
-              </ListItem>
+              <li>
+                <Link href={product.url} legacyBehavior passHref>
+                  <NavigationMenuLink
+                    asChild
+                    className={
+                      (navigationMenuTriggerStyle(),
+                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground")
+                    }
+                  >
+                    <div>
+                      <div className="text-sm font-medium leading-none">
+                        {product.title}
+                      </div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        {product.title} description
+                      </p>
+                    </div>
+                  </NavigationMenuLink>
+                </Link>
+              </li>
             );
           })}
         </ul>
@@ -63,32 +76,6 @@ function NavLink({ title, products }: NavLinkProps) {
     </NavigationMenuItem>
   );
 }
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className,
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-
-ListItem.displayName = "ListItem";
 
 const DesktopNav = () => {
   return (
