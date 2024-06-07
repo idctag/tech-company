@@ -49,7 +49,7 @@ function NavLink({ title, products }: NavLinkProps) {
           </li>
           {products.map((product) => {
             return (
-              <li>
+              <li key={product.title}>
                 <Link href={product.url} legacyBehavior passHref>
                   <NavigationMenuLink
                     asChild
