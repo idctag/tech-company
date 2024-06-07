@@ -2,13 +2,6 @@
 import { nav_products } from "@/constants";
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import Link from "next/link";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "../ui/tooltip";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
@@ -94,6 +87,9 @@ const ListItem = React.forwardRef<
     </li>
   );
 });
+
+ListItem.displayName = "ListItem";
+
 const DesktopNav = () => {
   return (
     <div className="header-1">
