@@ -8,11 +8,11 @@ export const nav_products = [
       },
       {
         title: "Sub Product Two",
-        url: "/one/product-one",
+        url: "/one/product-two",
       },
       {
         title: "Sub Product Three",
-        url: "/one/product-one",
+        url: "/one/product-three",
       },
     ],
   },
@@ -21,7 +21,7 @@ export const nav_products = [
     products: [
       {
         title: "Sub Product One",
-        url: "/two/product-two",
+        url: "/two/product-one",
       },
       {
         title: "Sub Product Two",
@@ -29,7 +29,7 @@ export const nav_products = [
       },
       {
         title: "Sub Product Three",
-        url: "/two/product-two",
+        url: "/two/product-three",
       },
     ],
   },
@@ -38,11 +38,11 @@ export const nav_products = [
     products: [
       {
         title: "Sub Product One",
-        url: "/three/product-three",
+        url: "/three/product-one",
       },
       {
         title: "Sub Product Two",
-        url: "/three/product-three",
+        url: "/three/product-two",
       },
       {
         title: "Sub Product Three",
@@ -55,15 +55,15 @@ export const nav_products = [
     products: [
       {
         title: "Sub Product One",
-        url: "/four/product-four",
+        url: "/four/product-one",
       },
       {
         title: "Sub Product Two",
-        url: "/four/product-four",
+        url: "/four/product-two",
       },
       {
         title: "Sub Product Three",
-        url: "/four/product-four",
+        url: "/four/product-three",
       },
     ],
   },

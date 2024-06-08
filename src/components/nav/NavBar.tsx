@@ -4,7 +4,7 @@ import { MobileNav } from "./MobileNav";
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav className="sticky top-0 bg-zinc-100">
       <DesktopNav />
       <MobileNav />
       <Separator />

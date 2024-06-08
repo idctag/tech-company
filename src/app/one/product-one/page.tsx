@@ -1,5 +1,12 @@
+import ProductIntro from "@/components/ProductIntro";
+import WidthWrapper from "@/components/WidthWrapper";
+
 const ProductOnePage = () => {
-  return <div>Product one Page</div>;
+  return (
+    <WidthWrapper>
+      <ProductIntro />
+    </WidthWrapper>
+  );
 };
 
 export default ProductOnePage;

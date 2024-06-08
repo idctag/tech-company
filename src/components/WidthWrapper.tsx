@@ -3,9 +3,5 @@ export default function WidthWrapper({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="w-svw px-5 pt-16 flex flex-col items-center">
-      {children}
-    </div>
-  );
+  return <div className="w-svw flex flex-col items-center">{children}</div>;
 }
