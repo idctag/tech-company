@@ -1,6 +1,5 @@
 import { Menu } from "lucide-react";
 import Link from "next/link";
-import { Separator } from "../ui/separator";
 
 export const MobileNav = () => {
   return (

@@ -36,16 +36,18 @@ type NavLinkProps = {
 function NavLink({ title, products }: NavLinkProps) {
   return (
     <NavigationMenuItem>
-      <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
+      <NavigationMenuTrigger className="hover:bg-transparent">
+        {title}
+      </NavigationMenuTrigger>
       <NavigationMenuContent>
         <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
           <li className="row-span-3">
-            <p className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+            <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
               <div className="mb-2 mt-4 text-lg font-medium">{title}</div>
               <p className="text-sm leading-tight text-muted-foreground">
                 {title} description
               </p>
-            </p>
+            </div>
           </li>
           {products.map((product) => {
             return (
@@ -55,7 +57,7 @@ function NavLink({ title, products }: NavLinkProps) {
                     asChild
                     className={
                       (navigationMenuTriggerStyle(),
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground")
+                      "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground")
                     }
                   >
                     <div>
