@@ -86,7 +86,7 @@ const DesktopNav = () => {
         Logo
       </Link>
       <div className="col-span-8 justify-center flex">
-        <NavigationMenu className="">
+        <NavigationMenu>
           <NavigationMenuList className="md:gap-6 lg:gap-12">
             {nav_products.map((item) => {
               return (

@@ -24,13 +24,13 @@ function ShowcaseCard({ title, description, Icon }: ShowcaseCardProps) {
 const ProductIntro = () => {
   return (
     <div className="h-[64rem]  w-screen">
-      <div className="w-[100%] flex justify-center">
+      <div className="w-[100%] flex justify-center mt-32">
         <h1 className="max-w-[48rem] flex justify-center lg:text-[4rem] md:text-[2rem] text-center">
           What do we offer
         </h1>
       </div>
       <div className="w-screen flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-3  sm:grid-cols-2 gap-20 mt-16 justify-items-center max-w-[82rem]">
+        <div className="grid grid-cols-1 md:grid-cols-3  sm:grid-cols-2 gap-20 mt-24 justify-items-center max-w-[82rem]">
           <ShowcaseCard
             title="Affordable"
             description="best bank for you buck"
