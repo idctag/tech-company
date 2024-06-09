@@ -1,5 +1,7 @@
+import ProductIntroThree from "@/components/ProductIntroThree";
+
 const ProductThreePage = () => {
-  return <div>ProductThreePage</div>;
+  return <ProductIntroThree />;
 };
 
 export default ProductThreePage;

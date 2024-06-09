@@ -6,6 +6,10 @@
   z-index: -1;
 }
 
+.z-front {
+  z-index: 1;
+}
+
 .bg-gradient-custom {
   background-color: transparent;
   backdrop-filter: blur(10px);
@@ -18,7 +22,7 @@
 
 @layer utilities {
   .header-1 {
-    @apply h-20 items-center px-5 grid-cols-12 md:grid hidden;
+    @apply h-20 items-center px-5 grid-cols-12 md:grid hidden w-svw;
   }
   .header-2 {
     @apply h-20 items-center px-5 md:hidden grid grid-cols-12;

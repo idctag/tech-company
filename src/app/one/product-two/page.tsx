@@ -1,12 +1,7 @@
 import ProductIntroTwo from "@/components/ProductIntroTwo";
-import WidthWrapper from "@/components/WidthWrapper";
 
 const ProductTwoPage = () => {
-  return (
-    <WidthWrapper>
-      <ProductIntroTwo />
-    </WidthWrapper>
-  );
+  return <ProductIntroTwo />;
 };
 
 export default ProductTwoPage;
