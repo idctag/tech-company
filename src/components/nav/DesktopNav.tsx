@@ -57,7 +57,7 @@ function NavLink({ title, products }: NavLinkProps) {
                     asChild
                     className={
                       (navigationMenuTriggerStyle(),
-                      "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground")
+                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground")
                     }
                   >
                     <div>
@@ -83,7 +83,7 @@ const DesktopNav = () => {
   return (
     <div className="header-1">
       <Link href="/" className="col-span-2 ">
-        Logo
+        Hello Anna
       </Link>
       <div className="col-span-8 justify-center flex">
         <NavigationMenu>
