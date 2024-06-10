@@ -83,7 +83,7 @@ const DesktopNav = () => {
   return (
     <div className="header-1">
       <Link href="/" className="col-span-2 ">
-        Hello Anna
+        Logo
       </Link>
       <div className="col-span-8 justify-center flex">
         <NavigationMenu>
