@@ -1,68 +1,51 @@
 export const nav_products = [
   {
-    title: "One",
+    title: "Home",
     products: [
       {
-        title: "Sub Product One",
+        title: "Main",
         url: "/one/product-one",
       },
       {
-        title: "Sub Product Two",
+        title: "Landing",
         url: "/one/product-two",
       },
       {
-        title: "Sub Product Three",
+        title: "Hosting",
         url: "/one/product-three",
       },
     ],
   },
   {
-    title: "Two",
+    title: "About",
     products: [
       {
-        title: "Sub Product One",
+        title: "About",
         url: "/one/product-one",
       },
       {
-        title: "Sub Product Two",
+        title: "Contact",
         url: "/one/product-two",
       },
       {
-        title: "Sub Product Three",
+        title: "Service",
         url: "/one/product-three",
       },
     ],
   },
   {
-    title: "Three",
+    title: "Page",
     products: [
       {
-        title: "Sub Product One",
+        title: "Right",
         url: "/one/product-one",
       },
       {
-        title: "Sub Product Two",
+        title: "Left",
         url: "/one/product-two",
       },
       {
-        title: "Sub Product Three",
-        url: "/one/product-three",
-      },
-    ],
-  },
-  {
-    title: "Four",
-    products: [
-      {
-        title: "Sub Product One",
-        url: "/one/product-one",
-      },
-      {
-        title: "Sub Product Two",
-        url: "/one/product-two",
-      },
-      {
-        title: "Sub Product Three",
+        title: "List",
         url: "/one/product-three",
       },
     ],

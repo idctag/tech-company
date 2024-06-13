@@ -2,24 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.z-back {
-  z-index: -1;
-}
-
-.z-front {
-  z-index: 1;
-}
-
-.bg-gradient-custom {
-  background-color: transparent;
-  backdrop-filter: blur(10px);
-  background-image: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(0, 0, 0, 0)
-  );
-}
-
 @layer utilities {
   .header-1 {
     @apply h-20 items-center px-5 grid-cols-12 md:grid hidden w-svw bg-transparent;
