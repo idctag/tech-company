@@ -2,7 +2,6 @@
 import { nav_products } from "@/constants";
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import {
   Sheet,
   SheetContent,
@@ -36,9 +35,7 @@ type NavLinkProps = {
 function NavLink({ title, products }: NavLinkProps) {
   return (
     <NavigationMenuItem>
-      <NavigationMenuTrigger className="hover:bg-transparent">
-        {title}
-      </NavigationMenuTrigger>
+      <NavigationMenuTrigger>{title}</NavigationMenuTrigger>
       <NavigationMenuContent>
         <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
           <li className="row-span-3">

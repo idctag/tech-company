@@ -1,4 +1,3 @@
-import { Separator } from "../ui/separator";
 import DesktopNav from "./DesktopNav";
 import { MobileNav } from "./MobileNav";
 
@@ -7,7 +6,6 @@ const NavBar = () => {
     <nav className="sticky top-0 bg-gradient-custom z-50">
       <DesktopNav />
       <MobileNav />
-      <Separator />
     </nav>
   );
 };

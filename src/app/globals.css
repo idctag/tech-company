@@ -22,7 +22,7 @@
 
 @layer utilities {
   .header-1 {
-    @apply h-20 items-center px-5 grid-cols-12 md:grid hidden w-svw;
+    @apply h-20 items-center px-5 grid-cols-12 md:grid hidden w-svw bg-transparent;
   }
   .header-2 {
     @apply h-20 items-center px-5 md:hidden grid grid-cols-12;
