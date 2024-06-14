@@ -2,7 +2,7 @@ import { Facebook, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-svw border sm:py-24">
+    <footer className="w-svw border sm:py-24 bg-secondary">
       <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 px-3 md:px-44 md:place-items-center h-[100%] gap-24">
         <div className="flex flex-col gap-5">
           <h1>[Name]</h1>
