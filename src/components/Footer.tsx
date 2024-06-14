@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Youtube } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -10,10 +11,28 @@ const Footer = () => {
             Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
             cillum sint consectetur cupidatat.
           </p>
-          <div className="flex gap-8">
-            <Facebook className="hover:cursor-pointer" size={50} />
-            <Youtube className="hover:cursor-pointer" size={50} />
-            <Twitter className="hover:cursor-pointer" size={50} />
+          <div className="flex pt-6 gap-3">
+            <Image
+              className="hover:cursor-pointer"
+              src="/facebook.svg"
+              alt="facebook"
+              width={45}
+              height={45}
+            />
+            <Image
+              className="hover:cursor-pointer"
+              src="/twitter.svg"
+              alt="twitter"
+              width={45}
+              height={45}
+            />
+            <Image
+              className="hover:cursor-pointer"
+              src="/youtube.svg"
+              alt="youtube"
+              width={45}
+              height={45}
+            />
           </div>
         </div>
         <div className="flex flex-col gap-5">

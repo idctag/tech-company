@@ -1,6 +1,14 @@
 "use client";
 import { nav_products } from "@/constants";
-import { Menu, Search, ShoppingCart } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Menu,
+  Phone,
+  Pin,
+  Search,
+  ShoppingCart,
+} from "lucide-react";
 import Link from "next/link";
 import {
   Sheet,
@@ -21,6 +29,7 @@ import {
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
 import React from "react";
+import Image from "next/image";
 
 type ProductsType = {
   title: string;
@@ -94,15 +103,63 @@ const DesktopNav = () => {
           <SheetTrigger>
             <Menu className="cursor-pointer" />
           </SheetTrigger>
-          <SheetContent className="flex flex-col w-80">
-            <SheetHeader>
-              <SheetTitle>Sheet title</SheetTitle>
-              <SheetDescription>Sheet Description</SheetDescription>
+          <SheetContent className="flex flex-col min-w-60 py-32">
+            <SheetHeader className="pb-8">
+              <SheetTitle>Support & Downloads</SheetTitle>
+              <SheetDescription>
+                Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+                sint cillum sint consectetur cupidatat.
+              </SheetDescription>
             </SheetHeader>
             <Separator />
-            <div>Sheet content</div>
+            <div className="flex flex-col gap-8 py-8">
+              <h1 className="font-bold">Contact Info</h1>
+              <div className="grid gap-4">
+                <div className="flex align-middle gap-2">
+                  <MapPin size={20} />
+                  <p>[building xxx-xxx-xxx street]</p>
+                </div>
+                <div className="flex align-middle gap-2">
+                  <Pin size={20} />
+                  <p>[City Postal code xxx-xxx]</p>
+                </div>
+                <div className="flex align-middle gap-2">
+                  <Mail size={20} />
+                  <p>[email@gmail.com]</p>
+                </div>
+                <div className="flex align-middle gap-2">
+                  <Phone size={20} />
+                  <p>[+88 (0) 101 0000 000]</p>
+                </div>
+              </div>
+            </div>
             <Separator />
-            <div>footer</div>
+            <div className="py-8">
+              <h1 className="font-bold">Follow us</h1>
+              <div className="flex pt-6 gap-3">
+                <Image
+                  className="hover:cursor-pointer"
+                  src="/facebook.svg"
+                  alt="facebook"
+                  width={45}
+                  height={45}
+                />
+                <Image
+                  className="hover:cursor-pointer"
+                  src="/twitter.svg"
+                  alt="twitter"
+                  width={45}
+                  height={45}
+                />
+                <Image
+                  className="hover:cursor-pointer"
+                  src="/youtube.svg"
+                  alt="youtube"
+                  width={45}
+                  height={45}
+                />
+              </div>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
