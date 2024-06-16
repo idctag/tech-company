@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import NavBar from "@/components/nav/NavBar";
 import Footer from "@/components/Footer";
+import { Separator } from "@/components/ui/separator";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         )}
       >
         <NavBar />
+        <Separator />
         {children}
         <Footer />
       </body>

@@ -23,9 +23,9 @@ function ShowcaseCard({ title, description, Icon }: ShowcaseCardProps) {
 }
 const ProductIntro = () => {
   return (
-    <div className="h-[64rem]  w-screen">
+    <div className="h-[52rem]  w-screen">
       <div className="w-[100%] flex justify-center mt-32">
-        <h1 className="max-w-[48rem] flex justify-center lg:text-[4rem] md:text-[2rem] text-center">
+        <h1 className="max-w-[48rem] font-bold flex justify-center lg:text-[4rem] md:text-[2rem] text-center">
           What do we offer
         </h1>
       </div>

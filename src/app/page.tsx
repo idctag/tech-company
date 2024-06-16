@@ -1,3 +1,11 @@
+import ProductIntro from "@/components/ProductIntro";
+import ProductIntroTwo from "@/components/ProductIntroTwo";
+
 export default function Home() {
-  return <div>Landing page</div>;
+  return (
+    <main>
+      <ProductIntroTwo />
+      <ProductIntro />
+    </main>
+  );
 }
