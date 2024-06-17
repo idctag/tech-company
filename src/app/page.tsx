@@ -1,11 +1,10 @@
-import ProductIntroThree from "@/components/ProductIntroThree";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Gauge, HandCoins, LucideProps, ShieldPlus } from "lucide-react";
 import { Progress, Carousel } from "@/components/MTComponents";
 
-export function Hero() {
+function Hero() {
   return (
     <div className="h-[64rem] w-[100%] bg-[url('/bg-1.jpg')] bg-center bg-cover flex flex-col text-white items-center justify-center text-center">
       <p className="text-md md:text-3xl lg:text-8xl font-bold">
