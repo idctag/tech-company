@@ -1,13 +1,17 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
+import withMT from "@material-tailwind/react/utils/withMT"; // Import the Material Tailwind utility
 
-const config = {
+const config = withMT({
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+    // Add Material Tailwind paths
+    "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   prefix: "",
   theme: {
@@ -83,6 +87,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config);
 
 export default config;

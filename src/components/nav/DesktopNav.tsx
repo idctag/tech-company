@@ -45,7 +45,7 @@ function NavLink({ title, products }: NavLinkProps) {
   return (
     <NavigationMenuItem>
       <NavigationMenuTrigger className="text-lg">{title}</NavigationMenuTrigger>
-      <NavigationMenuContent className="py-7">
+      <NavigationMenuContent className="py-7 mt-3">
         <ul className="min-w-72 flex flex-col align-middle">
           {products.map((product) => {
             return (
