@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Gauge, HandCoins, LucideProps, ShieldPlus } from "lucide-react";
 import { Progress, Carousel } from "@/components/MTComponents";
+import { type } from "os";
 
 function Hero() {
   return (
@@ -91,10 +92,16 @@ function ProgressBarsSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[32em] w-[100%] max-w-[1200px]">
         <div className="flex flex-col gap-12 w-[95%]">
           <ProgressBar value={50} title="Information Architecture" />
-          <ProgressBar value={50} title="App Development" />
-          <ProgressBar value={50} title="User Interface" />
+          <ProgressBar value={92} title="App Development" />
+          <ProgressBar value={93} title="User Interface" />
+          <ProgressBar value={74} title="Total memory usage" />
         </div>
-        <div>image</div>
+        <div>
+          <img
+            src="https://img.freepik.com/premium-vector/seo-with-person-using-smartphone-vector_951778-1707.jpg?w=2000"
+            alt="image"
+          />
+        </div>
       </div>
     </div>
   );
@@ -102,21 +109,21 @@ function ProgressBarsSection() {
 
 function CarouselSection() {
   return (
-    <Carousel className="w-svw h-[32em] my-[6em]" loop>
+    <Carousel className="w-svw h-[50em] mb-[6em]" loop>
       <img
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+        src="https://img.freepik.com/free-vector/hand-drawn-innovative-idea-illustrated_52683-76699.jpg?w=2000&t=st=1718719175~exp=1718719775~hmac=30b377fc26025b2e85003f11bead6e4f059199fde796363f06f5c8231072d136"
         alt="image 1"
-        className="h-full w-full object-cover"
+        className="w-[50%] h-[100%] mx-auto"
       />
       <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+        src="https://img.freepik.com/free-vector/hand-drawn-gathering-data-business-concept_23-2149164274.jpg?w=2000&t=st=1718719194~exp=1718719794~hmac=3d2146a7f6c0dbb7c41c1d23e3bb5fab068d61a5878885df20c9e483d579ff40"
         alt="image 2"
-        className="h-full w-full object-cover"
+        className="w-[50%] h-[100%] mx-auto"
       />
       <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+        src="https://img.freepik.com/free-vector/programmer-working-with-css_52683-24172.jpg?w=2000&t=st=1718719210~exp=1718719810~hmac=3d21ee61dba6317e7e5ccede87e2846190a22e9c327082bbd25ff9686212059d"
         alt="image 3"
-        className="h-full w-full object-cover"
+        className="w-[50%] h-[100%] mx-auto"
       />
     </Carousel>
   );
@@ -127,8 +134,8 @@ export default function Home() {
     <div className="flex flex-col">
       <Hero />
       <Cards />
-      <ProgressBarsSection />
       <CarouselSection />
+      <ProgressBarsSection />
     </div>
   );
 }
