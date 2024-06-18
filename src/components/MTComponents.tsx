@@ -5,6 +5,7 @@ import {
   Button,
   Progress,
   Carousel,
+  IconButton,
 } from "@material-tailwind/react";
 
-export { ThemeProvider, Button, Progress, Carousel };
+export { ThemeProvider, Button, Progress, Carousel, IconButton };

@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Gauge, HandCoins, LucideProps, ShieldPlus } from "lucide-react";
-import { Progress, Carousel } from "@/components/MTComponents";
-import { type } from "os";
+import { Progress, Carousel, IconButton } from "@/components/MTComponents";
 
 function Hero() {
   return (
@@ -109,7 +108,7 @@ function ProgressBarsSection() {
 
 function CarouselSection() {
   return (
-    <Carousel className="w-svw h-[50em] mb-[6em]" loop>
+    <Carousel className="w-svw h-[50em] mb-[6em]" autoplay loop>
       <img
         src="https://img.freepik.com/free-vector/hand-drawn-innovative-idea-illustrated_52683-76699.jpg?w=2000&t=st=1718719175~exp=1718719775~hmac=30b377fc26025b2e85003f11bead6e4f059199fde796363f06f5c8231072d136"
         alt="image 1"
