@@ -109,7 +109,7 @@ function ProgressBarsSection() {
 
 function CarouselSection() {
   return (
-    <Carousel className="carousel w-svw max-h-[70em] text-black">
+    <Carousel className="carousel w-svw max-h-[50em] text-black">
       <img
         src="https://img.freepik.com/free-vector/hand-drawn-innovative-idea-illustrated_52683-76699.jpg?w=2000&t=st=1718719175~exp=1718719775~hmac=30b377fc26025b2e85003f11bead6e4f059199fde796363f06f5c8231072d136"
         alt="image 1"
