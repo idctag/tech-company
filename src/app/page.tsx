@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Gauge, HandCoins, LucideProps, ShieldPlus } from "lucide-react";
 import { Progress, Carousel, IconButton } from "@/components/MTComponents";
+import CheckMarkCard from "@/components/CheckMarkCard";
 
 function Hero() {
   return (
@@ -47,10 +48,10 @@ function ShowcaseCard({ title, description, Icon }: ShowcaseCardProps) {
 }
 const Cards = () => {
   return (
-    <div className="min-h-[40rem]  w-screen">
-      <div className="w-[100%] flex justify-center mt-32">
+    <div className="min-h-[30rem]  w-screen">
+      <div className="w-[100%] flex justify-center">
         <div className="w-screen flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3  sm:grid-cols-2 gap-32 mt-24 justify-items-center max-w-[82rem]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 lg:gap-40 mt-24 justify-items-center max-w-[82rem]">
             <ShowcaseCard
               title="Affordable"
               description="best bank for you buck"
@@ -108,7 +109,7 @@ function ProgressBarsSection() {
 
 function CarouselSection() {
   return (
-    <Carousel className="w-svw h-[50em] mb-[6em]" autoplay loop>
+    <Carousel className="w-svw h-[50em]" loop>
       <img
         src="https://img.freepik.com/free-vector/hand-drawn-innovative-idea-illustrated_52683-76699.jpg?w=2000&t=st=1718719175~exp=1718719775~hmac=30b377fc26025b2e85003f11bead6e4f059199fde796363f06f5c8231072d136"
         alt="image 1"
@@ -131,10 +132,10 @@ function CarouselSection() {
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <Hero />
-      <Cards />
       <CarouselSection />
+      <Cards />
       <ProgressBarsSection />
+      <CheckMarkCard />
     </div>
   );
 }
