@@ -74,12 +74,10 @@ function ProgressBarsSection() {
           <ProgressBar value={93} title="User Interface" />
           <ProgressBar value={74} title="Total memory usage" />
         </div>
-        <div>
-          <img
-            src="https://img.freepik.com/premium-vector/seo-with-person-using-smartphone-vector_951778-1707.jpg?w=2000"
-            alt="image"
-          />
-        </div>
+        <img
+          src="https://img.freepik.com/premium-vector/seo-with-person-using-smartphone-vector_951778-1707.jpg?w=2000"
+          alt="image"
+        />
       </div>
     </div>
   );
