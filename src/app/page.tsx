@@ -2,30 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Gauge, HandCoins, LucideProps, ShieldPlus } from "lucide-react";
-import { Progress, Carousel, IconButton } from "@/components/MTComponents";
+import { Progress, Carousel, MTButton } from "@/components/MTComponents";
 import CheckMarkCard from "@/components/CheckMarkCard";
-
-function Hero() {
-  return (
-    <div className="h-[64rem] w-[100%] bg-[url('/bg-1.jpg')] bg-center bg-cover flex flex-col text-white items-center justify-center text-center">
-      <p className="text-md md:text-3xl lg:text-8xl font-bold">
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing.
-      </p>
-      <p className="px-32 md:text-sm lg:text-2xl py-8">
-        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-        enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-        exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
-        nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-      </p>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        <Button variant="secondary" size="lg">
-          Read more
-        </Button>
-        <Button size="lg">Demo</Button>
-      </div>
-    </div>
-  );
-}
 
 interface ShowcaseCardProps {
   title: string;
@@ -48,10 +26,10 @@ function ShowcaseCard({ title, description, Icon }: ShowcaseCardProps) {
 }
 const Cards = () => {
   return (
-    <div className="min-h-[30rem] w-screen">
-      <div className="w-[100%] flex justify-center mb-32 md:mb-32">
+    <div className="w-screen">
+      <div className="w-[100%] flex justify-center mb-32">
         <div className="w-screen flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 md:px-12 gap-20 md:gap-20 lg:gap-40 mt-24 justify-items-center max-w-[82rem]">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:px-12 gap-20 md:gap-20 lg:gap-40 justify-items-center max-w-[82rem]">
             <ShowcaseCard
               title="Affordable"
               description="best bank for you buck"
@@ -88,7 +66,7 @@ function ProgressBar({ value, title }: { value?: number; title?: string }) {
 
 function ProgressBarsSection() {
   return (
-    <div className="w-svw md:px-32 flex justify-center">
+    <div className="md:px-32 flex justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[32em] w-[100%] max-w-[1100px]">
         <div className="flex flex-col gap-12 w-[90%]">
           <ProgressBar value={50} title="Information Architecture" />
@@ -107,23 +85,60 @@ function ProgressBarsSection() {
   );
 }
 
+function CarouselPage({
+  title,
+  description,
+  img,
+}: {
+  title: string;
+  description?: string;
+  img: string;
+}) {
+  return (
+    <div className="grid grid-cols-3 items-center">
+      <img src={img} alt="image 1" className="carousel-image" />
+      <div className="flex text-center justify-center align-middle pr-24">
+        <div className="flex flex-col gap-6">
+          <h1 className="text-3xl">{title}</h1>
+          {description ? (
+            <p className="text-lg">{description}</p>
+          ) : (
+            <p className="text-lg">
+              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              sint cillum sint consectetur cupidatat.
+            </p>
+          )}
+          <div className="flex justify-center gap-6">
+            <MTButton
+              variant="gradient"
+              className="text-white hover:shadow-2xl"
+            >
+              Read more
+            </MTButton>
+            <MTButton variant="gradient" className="text-white">
+              Contanct us
+            </MTButton>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function CarouselSection() {
   return (
-    <Carousel className="carousel w-svw max-h-[50em] text-black">
-      <img
-        src="https://img.freepik.com/free-vector/hand-drawn-innovative-idea-illustrated_52683-76699.jpg?w=2000&t=st=1718719175~exp=1718719775~hmac=30b377fc26025b2e85003f11bead6e4f059199fde796363f06f5c8231072d136"
-        alt="image 1"
-        className="carousel-image"
+    <Carousel className="carousel">
+      <CarouselPage
+        title="Heading one"
+        img="https://img.freepik.com/free-vector/hand-drawn-innovative-idea-illustrated_52683-76699.jpg?w=2000&t=st=1718719175~exp=1718719775~hmac=30b377fc26025b2e85003f11bead6e4f059199fde796363f06f5c8231072d136"
       />
-      <img
-        src="https://img.freepik.com/free-vector/hand-drawn-gathering-data-business-concept_23-2149164274.jpg?w=2000&t=st=1718719194~exp=1718719794~hmac=3d2146a7f6c0dbb7c41c1d23e3bb5fab068d61a5878885df20c9e483d579ff40"
-        alt="image 2"
-        className="carousel-image"
+      <CarouselPage
+        title="Heading two"
+        img="https://img.freepik.com/free-vector/hand-drawn-gathering-data-business-concept_23-2149164274.jpg?w=2000&t=st=1718719194~exp=1718719794~hmac=3d2146a7f6c0dbb7c41c1d23e3bb5fab068d61a5878885df20c9e483d579ff40"
       />
-      <img
-        src="https://img.freepik.com/free-vector/programmer-working-with-css_52683-24172.jpg?w=2000&t=st=1718719210~exp=1718719810~hmac=3d21ee61dba6317e7e5ccede87e2846190a22e9c327082bbd25ff9686212059d"
-        alt="image 3"
-        className="carousel-image"
+      <CarouselPage
+        title="Heading three"
+        img="https://img.freepik.com/free-vector/hand-drawn-business-strategy_23-2149164272.jpg?t=st=1718806109~exp=1718809709~hmac=466531ab8733ecfc8b0d909fba4c3828041165927a14ff1db7d97d7d5855bce3&w=2000"
       />
     </Carousel>
   );

@@ -8,4 +8,4 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 
-export { ThemeProvider, Button, Progress, Carousel, IconButton };
+export { ThemeProvider, Button as MTButton, Progress, Carousel, IconButton };

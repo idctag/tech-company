@@ -10,9 +10,9 @@
     @apply h-20 items-center px-5 md:hidden grid grid-cols-12 bg-white;
   }
   .carousel-image {
-    @apply max-w-[95%] md:max-w-[50%] max-h-[100%] mx-auto;
+    @apply col-span-2;
   }
-  .carousel button {
+  .carousel > button {
     @apply text-black hover:bg-gray-50 active:bg-gray-100;
   }
 }
