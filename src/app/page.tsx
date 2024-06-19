@@ -48,10 +48,10 @@ function ShowcaseCard({ title, description, Icon }: ShowcaseCardProps) {
 }
 const Cards = () => {
   return (
-    <div className="min-h-[30rem]  w-screen">
-      <div className="w-[100%] flex justify-center">
+    <div className="min-h-[30rem] w-screen">
+      <div className="w-[100%] flex justify-center mb-32 md:mb-32">
         <div className="w-screen flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-20 lg:gap-40 mt-24 justify-items-center max-w-[82rem]">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:px-12 gap-20 md:gap-20 lg:gap-40 mt-24 justify-items-center max-w-[82rem]">
             <ShowcaseCard
               title="Affordable"
               description="best bank for you buck"
@@ -89,8 +89,8 @@ function ProgressBar({ value, title }: { value?: number; title?: string }) {
 function ProgressBarsSection() {
   return (
     <div className="w-svw md:px-32 flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[32em] w-[100%] max-w-[1200px]">
-        <div className="flex flex-col gap-12 w-[95%]">
+      <div className="grid grid-cols-1 md:grid-cols-2 place-items-center min-h-[32em] w-[100%] max-w-[1100px]">
+        <div className="flex flex-col gap-12 w-[90%]">
           <ProgressBar value={50} title="Information Architecture" />
           <ProgressBar value={92} title="App Development" />
           <ProgressBar value={93} title="User Interface" />
@@ -109,21 +109,21 @@ function ProgressBarsSection() {
 
 function CarouselSection() {
   return (
-    <Carousel className="w-svw h-[50em]" loop>
+    <Carousel className="carousel w-svw max-h-[70em] text-black">
       <img
         src="https://img.freepik.com/free-vector/hand-drawn-innovative-idea-illustrated_52683-76699.jpg?w=2000&t=st=1718719175~exp=1718719775~hmac=30b377fc26025b2e85003f11bead6e4f059199fde796363f06f5c8231072d136"
         alt="image 1"
-        className="w-[50%] h-[100%] mx-auto"
+        className="carousel-image"
       />
       <img
         src="https://img.freepik.com/free-vector/hand-drawn-gathering-data-business-concept_23-2149164274.jpg?w=2000&t=st=1718719194~exp=1718719794~hmac=3d2146a7f6c0dbb7c41c1d23e3bb5fab068d61a5878885df20c9e483d579ff40"
         alt="image 2"
-        className="w-[50%] h-[100%] mx-auto"
+        className="carousel-image"
       />
       <img
         src="https://img.freepik.com/free-vector/programmer-working-with-css_52683-24172.jpg?w=2000&t=st=1718719210~exp=1718719810~hmac=3d21ee61dba6317e7e5ccede87e2846190a22e9c327082bbd25ff9686212059d"
         alt="image 3"
-        className="w-[50%] h-[100%] mx-auto"
+        className="carousel-image"
       />
     </Carousel>
   );
