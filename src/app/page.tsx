@@ -11,7 +11,7 @@ interface ShowcaseCardProps {
 }
 function ShowcaseCard({ title, description, Icon }: ShowcaseCardProps) {
   return (
-    <Card className="hover:cursor-pointer max-w-64">
+    <Card className="hover:cursor-pointer max-w-64 transition ease-in-out delay-75 custom-hover">
       <CardContent className="flex justify-center align-middle">
         {Icon && <Icon size={132} className="m-8" />}
       </CardContent>

@@ -1,6 +1,6 @@
 function Card({ title, fill }: { title: string; fill: string }) {
   return (
-    <div className="flex items-start gap-5 my-32">
+    <div className="flex items-start gap-5 my-32 custom-hover rounded-lg p-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"

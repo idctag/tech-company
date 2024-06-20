@@ -15,6 +15,12 @@
   .carousel > button {
     @apply text-black hover:bg-gray-50 active:bg-gray-100;
   }
+  .custom-shadow {
+    @apply shadow-[0_25px_70px_-25px];
+  }
+  .custom-hover {
+    @apply transition hover:-translate-y-3 hover:custom-shadow;
+  }
 }
 
 @layer base {
