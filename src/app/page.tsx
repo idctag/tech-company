@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Gauge, HandCoins, LucideProps, ShieldPlus } from "lucide-react";
@@ -26,7 +25,7 @@ function ShowcaseCard({ title, description, Icon }: ShowcaseCardProps) {
 }
 const Cards = () => {
   return (
-    <div className="w-screen">
+    <div className="w-screen mt-32">
       <div className="w-[100%] flex justify-center mb-32">
         <div className="w-screen flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-3 md:px-12 gap-20 md:gap-20 lg:gap-40 justify-items-center max-w-[82rem]">
@@ -146,9 +145,9 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <CarouselSection />
-      <Cards />
-      <ProgressBarsSection />
       <CheckMarkCard />
+      <ProgressBarsSection />
+      <Cards />
     </div>
   );
 }
