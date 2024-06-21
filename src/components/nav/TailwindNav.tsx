@@ -150,7 +150,7 @@ export function ComplexNavbar() {
 
   return (
     <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6 mt-3">
-      <div className="relative mx-auto grid grid-cols-3  text-blue-gray-900">
+      <div className="relative mx-auto flex justify-between lg:grid lg:grid-cols-3  text-blue-gray-900">
         <Typography
           as="a"
           href="#"
