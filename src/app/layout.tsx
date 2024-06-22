@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { ComplexNavbar } from "@/components/nav/TailwindNav";
-import { FooterWithSitemap } from "@/components/MaterialFooter";
+import { Footer } from "@/components/footer";
+import { ComplexNavbar } from "@/components/nav";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,13 +24,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased w-svw",
+          "flex min-h-screen bg-background font-sans antialiased w-svw justify-center",
           inter.variable,
         )}
       >
-        <ComplexNavbar />
-        {children}
-        <FooterWithSitemap />
+        <div className="max-w-[1600px]">
+          <ComplexNavbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
