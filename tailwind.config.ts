@@ -30,6 +30,10 @@ const config = withMT({
         custom:
           "0px 1px 2px 0px rgba(60, 64, 67, 0.3), 0px 2px 6px 2px rgba(60, 64, 67, 0.15)",
       },
+      backgroundImage: {
+        "hero-image": "url('/hero.png')",
+        "footer-texture": "url('/img/footer-texture.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

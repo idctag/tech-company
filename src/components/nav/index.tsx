@@ -67,36 +67,34 @@ export function ComplexNavbar() {
   }, []);
 
   return (
-    <div className="max-w-[1600px] flex justify-center">
-      <Navbar
-        variant="gradient"
-        className="fixed top-3 mx-auto w-[100%] p-2 lg:rounded-full lg:pl-6 mt-3"
-      >
-        <div className="relative mx-auto flex justify-between lg:grid lg:grid-cols-3  text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
-          >
-            Logo
-          </Typography>
-          <div className="hidden lg:block">
-            <NavList />
-          </div>
-          <IconButton
-            size="sm"
-            color="blue-gray"
-            variant="text"
-            onClick={toggleIsNavOpen}
-            className="ml-auto mr-2 lg:hidden"
-          >
-            <Bars2Icon className="h-6 w-6" />
-          </IconButton>
-        </div>
-        <Collapse open={isNavOpen} className="overflow-scroll">
+    <Navbar
+      variant="gradient"
+      className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6"
+    >
+      <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
+        <Typography
+          as="a"
+          href="#"
+          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+        >
+          Logo
+        </Typography>
+        <div className="hidden lg:block">
           <NavList />
-        </Collapse>
-      </Navbar>
-    </div>
+        </div>
+        <IconButton
+          size="sm"
+          color="blue-gray"
+          variant="text"
+          onClick={toggleIsNavOpen}
+          className="ml-auto mr-2 lg:hidden"
+        >
+          <Bars2Icon className="h-6 w-6" />
+        </IconButton>
+      </div>
+      <Collapse open={isNavOpen} className="overflow-scroll">
+        <NavList />
+      </Collapse>
+    </Navbar>
   );
 }

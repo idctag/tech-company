@@ -15,7 +15,7 @@ type CardProps = {
 
 export function SimpleCard({ title, description, buttonText }: CardProps) {
   return (
-    <Card className="my-6 w-96 shadow-none text-black hover:bg-black hover:text-white">
+    <Card className="my-6 w-[100%] lg:max-w-96 lg:w-[85%] shadow-none text-black  hover:bg-black hover:text-white">
       <CardBody>
         <Typography variant="h5" className="mb-2">
           {title}
