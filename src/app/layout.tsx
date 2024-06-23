@@ -28,7 +28,7 @@ export default function RootLayout({
           inter.variable,
         )}
       >
-        <div className="max-w-[1600px]">
+        <div className="">
           <ComplexNavbar />
           {children}
           <Footer />
