@@ -28,7 +28,7 @@ function HeroCards() {
 
 const Hero = () => {
   return (
-    <div className="w-[100%] min-h-[95svh]">
+    <div className="w-[100%] lg:max-h-[95svh]">
       <div className="w-svw h-[50svh] overflow-hidden">
         <img src="/hero.png" className="w-full h-full object-cover" />
       </div>

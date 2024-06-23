@@ -121,7 +121,12 @@ function NavList() {
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       {navMenuItems.map((item) => (
-        <NavListMenu items={item.items} title={item.title} icon={item.icon} />
+        <NavListMenu
+          key={item.title}
+          items={item.items}
+          title={item.title}
+          icon={item.icon}
+        />
       ))}
       {navListItems.map(({ label, icon }, key) => (
         <Typography
@@ -156,10 +161,10 @@ export function ComplexNavbar() {
 
   return (
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
-      <div className="relative mx-auto grid grid-cols-2 lg:grid-cols-3 place-items-center items-center justify-between text-blue-gray-900">
+      <div className="relative mx-auto flex lg:grid lg:grid-cols-3 place-items-center items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
-          href="#"
+          href="/"
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
         >
           Logo
