@@ -7,35 +7,24 @@ import {
   MenuItem,
   Card,
 } from "@material-tailwind/react";
-import {
-  Square3Stack3DIcon,
-  ChevronDownIcon,
-  RocketLaunchIcon,
-} from "@heroicons/react/24/solid";
-import { Fragment, useState } from "react";
+import { ChevronDownIcon, RocketLaunchIcon } from "@heroicons/react/24/solid";
+import { Fragment, createElement, useState } from "react";
 
-const navListMenuItems = [
-  {
-    title: "@material-tailwind/html",
-    description:
-      "Learn how to use @material-tailwind/html, packed with rich components and widgets.",
-  },
-  {
-    title: "@material-tailwind/react",
-    description:
-      "Learn how to use @material-tailwind/react, packed with rich components for React.",
-  },
-  {
-    title: "Material Tailwind PRO",
-    description:
-      "A complete set of UI Elements for building faster websites in less time.",
-  },
-];
+type NavListMenuItemType = {
+  title: string;
+  description: string;
+};
 
-export default function NavListMenu() {
+type NavListMenuType = {
+  items: NavListMenuItemType[];
+  title: string;
+  icon: React.ElementType;
+};
+
+export default function NavListMenu({ items, title, icon }: NavListMenuType) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const renderItems = navListMenuItems.map(({ title, description }) => (
+  const renderItems = items.map(({ title, description }) => (
     <a href="#" key={title}>
       <MenuItem>
         <Typography variant="h6" color="blue-gray" className="mb-1">
@@ -54,8 +43,10 @@ export default function NavListMenu() {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-normal">
             <MenuItem className="hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full">
-              <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
-              Pages{" "}
+              {createElement(icon, {
+                className: "h-[18px] w-[18px] text-blue-gray-500",
+              })}
+              {title}
               <ChevronDownIcon
                 strokeWidth={2}
                 className={`h-3 w-3 transition-transform ${
@@ -80,8 +71,10 @@ export default function NavListMenu() {
         </MenuList>
       </Menu>
       <MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden">
-        <Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
-        Pages{" "}
+        {createElement(icon, {
+          className: "h-[18px] w-[18px] text-blue-gray-500",
+        })}
+        {title}
       </MenuItem>
       <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
         {renderItems}
