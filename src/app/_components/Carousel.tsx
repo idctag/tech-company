@@ -96,7 +96,7 @@ function CarouselSection({ delay }: { delay: number }) {
 
 export function CarouselCards() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 place-items-center mb-16">
+    <div className="grid grid-cols-1 lg:grid-cols-3 place-items-center mb-16 max-w-[1600px] mx-auto">
       <div className="">
         <CarouselSection delay={2000} />
       </div>
